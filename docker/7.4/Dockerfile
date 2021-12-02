@@ -10,8 +10,6 @@ WORKDIR /var/www/html
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ=UTC
 
-RUN git clone https://github.com/gperl27/discurd.git
-
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update \
